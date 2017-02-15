@@ -1,0 +1,22 @@
+# Spring Properties
+spring:
+  application:
+     name: web-server
+logging:
+  file: /logs/web-server.log
+  pattern:
+    console: '%d %-5level %logger : %msg%n'
+  level: 
+    com.mu.microservices: DEBUG
+    org.springframework.web: INFO
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+    register-with-eureka: false
+
+# HTTP Server
+server:
+  port: 3333   # HTTP (Tomcat) port
